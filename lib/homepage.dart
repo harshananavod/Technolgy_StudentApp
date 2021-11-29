@@ -42,7 +42,7 @@ class _HomepageState extends State<Homepage> {
               Group(),
             ],
             title: Text(
-              "Home page",
+              "Home page 1",
               style: TextStyle(
                   fontWeight: FontWeight.w500,
                   color: HexColor("#FFFFFF"),
