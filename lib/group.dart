@@ -22,7 +22,7 @@ class Group extends StatelessWidget {
       ),
       onPressed: () {
         _launchInWebViewWithJavaScript(
-            "https://t.me/joinchat/tzmJ_QtEVQ0yYTNlff");
+            "https://t.me/joinchat/tzmJ_QtEVQ0yYTNl");
       },
     );
   }
