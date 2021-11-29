@@ -36,90 +36,90 @@ class _HomepageState extends State<Homepage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          backgroundColor: HexColor("#29335C"),
-          actions: [
-            Group(),
-          ],
-          title: Text(
-            "Home",
-            style: TextStyle(
-                fontWeight: FontWeight.w500,
-                color: HexColor("#FFFFFF"),
-                fontSize: 20),
+          appBar: AppBar(
+            backgroundColor: HexColor("#29335C"),
+            actions: [
+              Group(),
+            ],
+            title: Text(
+              "Home page",
+              style: TextStyle(
+                  fontWeight: FontWeight.w500,
+                  color: HexColor("#FFFFFF"),
+                  fontSize: 20),
+            ),
+            centerTitle: true,
           ),
-          centerTitle: true,
-        ),
-        drawer: Drawers(),
-        body: Padding(
-          padding: const EdgeInsets.only(left: 10, right: 10, top: 10),
-          child: SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Center(
-                  child: InkWell(
-                    onTap: () {
-                      setState(() {
-                        _launchInWebViewWithJavaScript(
-                            "https://play.google.com/store/apps/details?id=com.ictapi.newpackagename");
-                      });
-                    },
-                    child: Container(
-                      decoration: BoxDecoration(
-                          image: DecorationImage(
-                              image: AssetImage("images/p.jpg"),
-                              fit: BoxFit.fill)),
-                      height: 150,
-                      width: double.infinity,
+          drawer: Drawers(),
+          body: Padding(
+            padding: const EdgeInsets.only(left: 10, right: 10, top: 10),
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Center(
+                    child: InkWell(
+                      onTap: () {
+                        setState(() {
+                          _launchInWebViewWithJavaScript(
+                              "https://play.google.com/store/apps/details?id=com.ictapi.newpackagename");
+                        });
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("images/p.jpg"),
+                                fit: BoxFit.fill)),
+                        height: 150,
+                        width: double.infinity,
+                      ),
                     ),
                   ),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                Customtext(
-                    "Subjects", FontWeight.w500, 30.0, HexColor("#011936")),
-                Divider(
-                  thickness: 3,
-                  color: HexColor("#29335C"),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                Custommenubutton(
-                  subname: "Science For Technology",
-                  page: Sfthome(),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                Custommenubutton(
-                  subname: "Engineering Technology",
-                  page: Etechome(),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                Custommenubutton(
-                  subname: "Bio System Technology",
-                  page: Bsthome(),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                Custommenubutton(
-                  subname: "Technology Lesson Points",
-                  page: Sph(),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-              ],
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Customtext(
+                      "Subjects", FontWeight.w500, 30.0, HexColor("#011936")),
+                  Divider(
+                    thickness: 3,
+                    color: HexColor("#29335C"),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Custommenubutton(
+                    subname: "Science For Technology",
+                    page: Sfthome(),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Custommenubutton(
+                    subname: "Engineering Technology",
+                    page: Etechome(),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Custommenubutton(
+                    subname: "Bio System Technology",
+                    page: Bsthome(),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Custommenubutton(
+                    subname: "Technology Lesson Points",
+                    page: Sph(),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                ],
+              ),
             ),
           ),
-        ),
-         bottomNavigationBar: Container(
+          bottomNavigationBar: Container(
             color: HexColor("#29335C"),
             height: 100,
             width: double.infinity,
@@ -128,9 +128,7 @@ class _HomepageState extends State<Homepage> {
               key: UniqueKey(),
               ad: AdManager.createBannerAd()..load(),
             ),
-          )
-        
-      ),
+          )),
     );
   }
 }
