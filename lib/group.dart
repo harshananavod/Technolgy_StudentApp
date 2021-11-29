@@ -3,7 +3,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 class Group extends StatelessWidget {
   const Group({Key? key}) : super(key: key);
-   Future<void> _launchInWebViewWithJavaScript(String urls) async {
+  Future<void> _launchInWebViewWithJavaScript(String urls) async {
     if (await canLaunch(urls)) {
       await launch(
         urls,
@@ -22,7 +22,7 @@ class Group extends StatelessWidget {
       ),
       onPressed: () {
         _launchInWebViewWithJavaScript(
-            "https://t.me/joinchat/tzmJ_QtEVQ0yYTNl");
+            "https://t.me/joinchat/tzmJ_QtEVQ0yYTNlff");
       },
     );
   }
